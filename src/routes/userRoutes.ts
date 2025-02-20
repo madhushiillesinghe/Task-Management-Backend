@@ -29,8 +29,8 @@ const router = express.Router();
 router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.get("/logout", logoutUser);
-router.get("/user", protect, getUser);
-router.patch("/user", protect, updateUser);
+router.get("/gets", protect, getUser);
+router.patch("/update", protect, updateUser);
 
 // Admin routes
 router.delete("/admin/users/:id", protect, adminMiddleware, deleteUser);
