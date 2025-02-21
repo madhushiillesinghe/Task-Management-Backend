@@ -41,14 +41,16 @@ export const getTasks = asyncHandler(async (req: Request, res: Response): Promis
   try {
     const userId = (req.user as IUser)._id; // Get the user ID from the request
 
-    // Find tasks associated with the current user
-    const tasks = await TaskModel.find();
+    // Find tasks that belong to the authenticated user
+    const tasks = await TaskModel.find({ user: userId });
+
     res.status(200).json({ length: tasks.length, tasks });
   } catch (error: any) {
     console.error("Error fetching tasks:", error.message);
-     res.status(500).json({ message: error.message });
+    res.status(500).json({ message: error.message });
   }
 });
+
 
 // Get a single task by ID
 export const getTask = asyncHandler(async (req: Request, res: Response): Promise<void> => {
