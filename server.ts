@@ -16,11 +16,9 @@ app.use(
         credentials: true,
     })
 );
-// Middleware to parse JSON and cookies
 app.use(express.json());
 app.use(cookieParser());
 
-// Connect to MongoDB
 const connectDB = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URI as string);

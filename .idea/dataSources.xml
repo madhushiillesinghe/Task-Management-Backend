@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="task_management@cluster0.5wpmc.mongodb.net" uuid="38578322-c59f-4240-857f-644cf3e30d05">
-      <driver-ref>mongo</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
-      <jdbc-url>mongodb+srv://cluster0.5wpmc.mongodb.net/task_management?retryWrites=true&amp;w=majority&amp;appName=Cluster0</jdbc-url>
-      <jdbc-additional-properties>
-        <property name="com.intellij.clouds.kubernetes.db.host.port" />
-        <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
-        <property name="com.intellij.clouds.kubernetes.db.container.port" />
-      </jdbc-additional-properties>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="task_management@cluster0.5wpmc.mongodb.net [2]" uuid="e150bbaf-cd3a-4263-b3d7-1f9004c43d26">
+    <data-source source="LOCAL" name="task_management@cluster0.5wpmc.mongodb.net" uuid="d802f5e9-3080-4198-aa24-912a376a0b48">
       <driver-ref>mongo</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>

@@ -10,11 +10,9 @@ const connect = async (): Promise<void> => {
 
     console.log("Connected to the database!");
   } catch (error: unknown) {
-    // Type the error as an instance of Error
     if (error instanceof Error) {
       console.error("Failed to connect to the database:", error.message);
     } else {
-      // Handle case where the error is not an instance of Error (unlikely, but safe handling)
       console.error("Unknown error occurred during database connection");
     }
     process.exit(1); // Exit process if connection fails

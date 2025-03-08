@@ -10,13 +10,10 @@ const errorHandler = (
   res: Response, 
   next: NextFunction
 ) => {
-  // check if response headers have already been sent to the client
   if (res.headersSent) {
-    // if true, pass the error to the next error-handling middleware
     return next(err);
   }
 
-  // set the status code of the response
   const statusCode = err.statusCode && err.statusCode >= 400 ? err.statusCode : 500;
   res.status(statusCode); // set the status code of the response
 
